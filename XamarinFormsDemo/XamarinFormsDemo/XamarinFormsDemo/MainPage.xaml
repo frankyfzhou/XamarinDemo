@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFormsDemo"
+             x:Class="XamarinFormsDemo.MainPage">
+    <Label Text="Xamarin.Forms Demo" 
+           VerticalOptions="Start" 
+           HorizontalOptions="Center" 
+           TextColor="White"
+           BackgroundColor="#3F51B5"/>
+    <StackLayout Spacing="20" Padding="20"
+                         VerticalOptions="Center">
+        <Entry Placeholder="Email"
+                       Text="{Binding Username}"/>
+        <Entry Placeholder="Password (Optional)"
+                       Text="{Binding Password}"
+                       IsPassword="true"/>
+        <Button Text="Sign in or Register" TextColor="#626363"
+                        BackgroundColor="#D6D7D7"
+                        Command="{Binding LoginCommand}"/>
+    </StackLayout>
+</ContentPage>
